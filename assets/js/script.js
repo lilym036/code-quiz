@@ -1,6 +1,12 @@
 var timeEl = document.querySelector(".time");
 var secondsLeft = 75;
 var startButton = document.querySelector(".start-button");
+var choices = document.querySelector(".choices");
+var startScreen= document.querySelector(".start-screen");
+var quizStart= document.querySelector(".quiz-start");
+var qTitle= document.querySelector(".qTitle");
+var currentQuestion= 0;
+var timerInterval;
 var questions = [{
     questionTitle: "School Psychologists work in:",
     questionChoices: ["1.Schools", "2.Homes", "3.Target", "4.None of the above"],
@@ -19,23 +25,57 @@ var questions = [{
     correctAnswer: "2.character",
 }, {
     questionTitle: "What does IEP stand for?",
-    questionChoices: ["1.Individualized Education Program", "2.Indiviudal Dependency Environmental Assitance", "3.Individualized Education Plan", "choice 4"],
+    questionChoices: ["1.Individualized Education Program", "2.Indiviudal Dependency Plan", "3.Individualized Education Plan", "Impossible Education Problem"],
     correctAnswer: "1.Individualized Education Program",
 }];
+console.log(questions);
 
 function setTime() {
-    var timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = "Time: " + secondsLeft;
+
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
         }
     }, 1000);
 }
 
+
 function startGame() {
     setTime();
+    startScreen.classList.add("hide");
+    quizStart.classList.remove("hide");
+    showQuestions()
 }
+
+function checkAnswer() {
+    console.log(this.dataset.value);
+    if (this.dataset.value === questions[currentQuestion].correctAnswer) {
+        currentQuestion++;
+    } else {
+        secondsLeft= secondsLeft - 10;
+    }
+    if (secondsLeft <= 0 ||currentQuestion=== questions.length) {
+        clearInterval(timerInterval);
+    } else {
+        showQuestions()
+    }
+}
+
+
+function showQuestions() {
+    qTitle.textContent= questions[currentQuestion].questionTitle;
+    choices.textContent= "";
+    for (let i= 0; i < questions[currentQuestion].questionChoices.length; i++) {
+        var button= document.createElement("button");
+        button.textContent= questions[currentQuestion].questionChoices[i];
+        button.setAttribute("data-value", questions[currentQuestion].questionChoices[i])
+        button.addEventListener("click", checkAnswer)
+        choices.appendChild(button);
+    }
+}
+
 
 startButton.addEventListener ("click", startGame);
 

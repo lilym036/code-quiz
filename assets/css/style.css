@@ -4,7 +4,13 @@
     box-sizing: border-box;
   }
 
-  main, h1 {
+  h3 {
+    text-align:left; 
+    color: purple; 
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  section {
     text-align: center;
   }
 
@@ -12,7 +18,7 @@
     padding: 4%
   }
 
-  .button1 {
+  .start-button {
     background-color: purple;
     color: white;
     border: 2px solid black;
@@ -21,11 +27,18 @@
     cursor: pointer;
   }
   
-  .button1:hover {
+.start-button:hover {
     opacity: 50%;
   }
 
-  section div ul li {
-     list-style-type: none;
+  .time {
+    padding-right: 25px;
+  }
 
+  .high-scores-button {
+    padding-left: 25px;
+  }
+
+  .hide {
+    display: none;
   }
