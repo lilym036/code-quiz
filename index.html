@@ -18,7 +18,7 @@
         <section class= "start-screen" >
             <h1>School Psychology Quiz Challenge</h1>
             <p>Hello! You will be given 75 seconds to answer as many questions as possible. </p>
-            <p>Please note that time will be subtracted whenever a question is answered incorrectly. </p>
+            <p>Please note that 10 seconds will be subtracted whenever a question is answered incorrectly. </p>
             <p>Click the button below whenever you are ready to begin. </p>
             <button class=" start-button">Start Quiz</button>
         </section>
@@ -26,8 +26,14 @@
             <h4 class="qTitle">test title</h4>
             <div class="choices"></div>
         </section>
-        <section>
-            
+        <section class= "form-start hide">
+            <form class="submit-form">
+                <h3 style= "text-align: center";>All done!</h3>
+                <p class="final-score";></p>
+                <label for= "initials">Initials:</label>
+                <input type="text" id="form-input" name="initials" placeholder="Enter initials" id="initials-text"><br>
+                <input class= "submit-btn" type="submit" value="Submit"> 
+            </form>
         </section>
     </main>
     <script src="./assets/js/script.js"></script>
