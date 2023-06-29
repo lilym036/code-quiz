@@ -1,4 +1,4 @@
-# code-quiz
+# school-psychology quiz
 
 ## Description
 This project is a timed quiz that assesses an individual's knowledge on school psychology fundamentals. It stores high scores so that a person can gauge their personal progress compared to their peers. 
