@@ -9,13 +9,7 @@ N/A
 ## Usage
 Open index.html file in the browser. Click on the "Start Quiz" button when you are ready to begin. A timer will begin counting down when the start button is pressed. Choose an answer for each question presented. An incorrect answer subtracts 10 seconds from the clock. You will be directed to the next question when choosing the correct answer. When finished with the quiz, input your initials in the text box and click the "submit" button to save your initials and score. 
 
-Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![alt text](./assets/images/screen-shot.png);
 
 ## Credits
 Matthew Calimbas- Tutor; Fred Kamm- TA

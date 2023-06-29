@@ -10,8 +10,9 @@ var currentQuestion = 0;
 var finalScore = document.querySelector(".final-score");
 var submitForm = document.querySelector(".submit-form");
 var submitButton = document.querySelector("#submit-btn");
-var studentInitials= document.querySelector("#form-input");
-var scoreInput= document.querySelector("#score-input");
+var studentInitials = document.querySelector("#form-input");
+var scoreInput = document.querySelector("#score-input");
+var lastSection = document.querySelector(".lastSection");
 var timerInterval;
 var questions = [{
     questionTitle: "School Psychologists work in:",
@@ -35,6 +36,11 @@ var questions = [{
     correctAnswer: "1.Individualized Education Program",
 }];
 console.log(questions);
+
+var highScores = {
+    student: studentInitials.value.trim(),
+    score: scoreInput.value.trim(),
+};
 
 function setTime() {
     timerInterval = setInterval(function () {
@@ -72,8 +78,7 @@ function checkAnswer() {
 
 
 function showQuestions() {
-    qTitle.textContent = questions[currentQuestion].questionTitle;
-    choices.textContent = "";
+    qTitle.textContent = questions[currentQuestion].questionTitle; choices.textContent = "";
     for (let i = 0; i < questions[currentQuestion].questionChoices.length; i++) {
         var button = document.createElement("button");
         button.textContent = questions[currentQuestion].questionChoices[i];
@@ -86,26 +91,33 @@ function showQuestions() {
 function form() {
     quizStart.classList.add("hide");
     formStart.classList.remove("hide");
-    finalScore.textContent= "Your final score is " + secondsLeft;
+    finalScore.textContent = "Your final score is " + secondsLeft;
 }
 
 
 startButton.addEventListener("click", startGame);
 
-submitButton.addEventListener("click", function(event) {
+submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     var highScores = {
-      student: studentInitials.value.trim(),
-      score: scoreInput.value.trim(),
+        student: studentInitials.value.trim(),
+        score: scoreInput.value.trim(),
     };
-    
+
     localStorage.setItem("save", JSON.stringify(highScores));
     renderMessage();
-    });
-    
-    function renderMessage() {
-      var lastGrade = JSON.parse(localStorage.getItem("save"));
-    
+});
+
+function renderMessage() {
+    var lastGrade = JSON.parse(localStorage.getItem("save"));
+    last ()
     }
 
-    function 
+function last (){
+    formStart.classList.add("hide");
+    lastSection.classList.remove("hide");
+    console.log(highScores.textContent= "Here are your initals and score: " + highScores);
+}
+
+
+  
