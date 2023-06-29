@@ -11,6 +11,8 @@ Open index.html file in the browser. Click on the "Start Quiz" button when you a
 
 ![alt text](./assets/images/screen-shot.png);
 
+https://lilym036.github.io/code-quiz/
+
 ## Credits
 Matthew Calimbas- Tutor; Fred Kamm- TA
 

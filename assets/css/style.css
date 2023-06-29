@@ -1,15 +1,18 @@
+/* Universal styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
+  /* This is the header for the High Scores */
   h3 {
     text-align:left; 
     color: purple; 
     text-decoration: underline;
     cursor: pointer;
   }
+
   section {
     text-align: center;
 
@@ -19,6 +22,7 @@
     padding: 4%
   }
 
+  /* This is the styling for the start button */
   .start-button {
     background-color: purple;
     color: white;
@@ -40,6 +44,7 @@
     padding-left: 25px;
   }
 
+/* This is connected to JavaScript when indicates "hide" */
   .hide {
     display: none;
   }

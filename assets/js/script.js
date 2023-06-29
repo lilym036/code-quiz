@@ -1,3 +1,4 @@
+// This selects a class or id from the HTML document 
 var timeEl = document.querySelector(".time");
 var secondsLeft = 75;
 var startButton = document.querySelector(".start-button");
@@ -53,7 +54,7 @@ function setTime() {
     }, 1000);
 }
 
-
+// This is where the quiz starts when the 'start button is clicked'
 function startGame() {
     setTime();
     startScreen.classList.add("hide");
@@ -94,9 +95,10 @@ function form() {
     finalScore.textContent = "Your final score is " + secondsLeft;
 }
 
-
+// This button starts the startGame function when clicked
 startButton.addEventListener("click", startGame);
 
+// This is the submit button
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     var highScores = {
