@@ -1,13 +1,13 @@
 # code-quiz
 
 ## Description
-This project is a timed quiz that assess's an individual's knowledge on school psychology fundamentals. It stores high scores so that a person can gauge their personal progress compared to their peers. 
+This project is a timed quiz that assesses an individual's knowledge on school psychology fundamentals. It stores high scores so that a person can gauge their personal progress compared to their peers. 
 
 ## Installation
 N/A
 
 ## Usage
-Open index.html file in the browser. Click on the "Start Quiz" button when you are ready to begin. A timer will begin counting down when the start button is pressed. Choose an answer for each question presented. An incorrect answer subtracts 10 seconds from the clock. you will be directed to the next question when choosing the correct answer. When finished with the quiz, input your initials in the text box and click the "submit" button to save your initials and score. 
+Open index.html file in the browser. Click on the "Start Quiz" button when you are ready to begin. A timer will begin counting down when the start button is pressed. Choose an answer for each question presented. An incorrect answer subtracts 10 seconds from the clock. You will be directed to the next question when choosing the correct answer. When finished with the quiz, input your initials in the text box and click the "submit" button to save your initials and score. 
 
 Include screenshots as needed.
 
@@ -18,8 +18,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
 ## Credits
-Matthew Calimbas- Tutor
-Fred Kamm- TA
+Matthew Calimbas- Tutor; Fred Kamm- TA
 
 ## License
 MIT License

@@ -9,8 +9,9 @@ var formStart = document.querySelector(".form-start");
 var currentQuestion = 0;
 var finalScore = document.querySelector(".final-score");
 var submitForm = document.querySelector(".submit-form");
-var initialsEl = document.querySelector("#initials-text");
-var submitButton = document.querySelector(".submit-btn");
+var submitButton = document.querySelector("#submit-btn");
+var studentInitials= document.querySelector("#form-input");
+var scoreInput= document.querySelector("#score-input");
 var timerInterval;
 var questions = [{
     questionTitle: "School Psychologists work in:",
@@ -34,7 +35,6 @@ var questions = [{
     correctAnswer: "1.Individualized Education Program",
 }];
 console.log(questions);
-
 
 function setTime() {
     timerInterval = setInterval(function () {
@@ -86,27 +86,26 @@ function showQuestions() {
 function form() {
     quizStart.classList.add("hide");
     formStart.classList.remove("hide");
-    finalScore.textContent = "Your final score is " + secondsLeft;
+    finalScore.textContent= "Your final score is " + secondsLeft;
 }
 
-// submitButton.addEventListener("sumbit", function (event) {
-//     event.preventDefault();
-//     var savedScores = {
-//         student: initialsEl.value,
-//         highScore: finalScore.value,
-//     };
-//     localStorage.setItem("savedScores", JSON.stringify(savedScores));
-//     renderMessage();
-// });
-
-// function renderMessage() {
-//     var lastScore = JSON.parse(localStorage.getItem("savedScores"));
-//     if (lastScore !== null) {
-//       document.querySelector(".message").textContent =  lastScore.initialsEl + 
-//       " received a score of" + lastScore
-//     }
-//   }
-  
 
 startButton.addEventListener("click", startGame);
 
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    var highScores = {
+      student: studentInitials.value.trim(),
+      score: scoreInput.value.trim(),
+    };
+    
+    localStorage.setItem("save", JSON.stringify(highScores));
+    renderMessage();
+    });
+    
+    function renderMessage() {
+      var lastGrade = JSON.parse(localStorage.getItem("save"));
+    
+    }
+
+    function 
